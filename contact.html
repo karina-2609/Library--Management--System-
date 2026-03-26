@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(120deg, #8e44ad, #3498db);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: #333;
+}
+
+/* Contact Section */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Form */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #732d91;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>Library System</h2>
+    <div>
+        <a href="project.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="students.html">Students</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<!-- Contact Form -->
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <form onsubmit="submitForm(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<script>
+function submitForm(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    alert("Thank you " + name + "! Your message has been sent.");
+
+    // Clear form
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+}
+</script>
+
+</body>
+</html>
